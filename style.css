@@ -1,0 +1,200 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  font-family: "Space Grotesk", sans-serif;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  font-size: 10px;
+  letter-spacing: 1px;
+}
+input {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid rgb(128, 128, 128, 0.3);
+  opacity: 0.7;
+  margin: 6px 0 0 2px;
+}
+button {
+  color: white;
+  background: hsl(278, 68%, 11%);
+  width: 300px;
+  padding: 12px;
+  border-radius: 5px;
+  border: none;
+  font-size: 12px;
+  letter-spacing: 1px;
+  margin-top: 15px;
+  font-family: "Space Grotesk", sans-serif;
+}
+p {
+  font-size: 13px;
+  opacity: 0.4;
+  margin: -10px 0 10px 0px;
+}
+.right {
+  margin: 270px 150px;
+  height: 300px;
+}
+.logoCard {
+  position: absolute;
+  top: 25%;
+  left: 16%;
+  height: 40px;
+}
+.frontCard,
+.backCard {
+  position: absolute;
+  top: 22%;
+  left: 14%;
+  height: 220px;
+  border-radius: 10px;
+  box-shadow: 0.9px 0.9px 0.6px rgba(0, 0, 0, 0.02),
+    2.1px 2.2px 1.5px rgba(0, 0, 0, 0.028),
+    3.9px 4.1px 2.9px rgba(0, 0, 0, 0.035),
+    6.9px 7.4px 5.1px rgba(0, 0, 0, 0.042),
+    13px 13.8px 9.6px rgba(0, 0, 0, 0.05), 31px 33px 23px rgba(0, 0, 0, 0.07);
+}
+.cardNumber,
+.cardName,
+.cardDate,
+.cvcCard {
+  position: absolute;
+  font-size: 25px;
+  top: 37%;
+  left: 16.4%;
+  color: white;
+  letter-spacing: 3px;
+}
+.cardName {
+  top: 44.5%;
+  left: 16%;
+  font-size: 11px;
+  letter-spacing: 2px;
+}
+.cardDate {
+  top: 44.5%;
+  left: 37.5%;
+  font-size: 11px;
+  letter-spacing: 2px;
+}
+.cvcCard {
+  top: 65.2%;
+  left: 42.5%;
+  letter-spacing: 2px;
+  font-size: 13px;
+}
+.backCard {
+  top: 53%;
+  left: 20%;
+}
+.attribution {
+  margin: 300px 110px 0 0;
+}
+.mm,
+.yy {
+  width: 40px;
+}
+.yy {
+  margin: 0 12px 0 3px;
+}
+.cvc {
+  width: 127px;
+}
+.labelCvc {
+  margin-left: 40px;
+}
+.errorName,
+.errorNumber,
+.errorDate,
+.errorCvc {
+  margin: 5px 0 30px 5px;
+  font-size: 8px;
+}
+.errorCvc {
+  margin-left: 20px;
+}
+.visibleRed {
+  color: hsl(0, 100%, 66%);
+}
+.visibleBorder {
+  border: 1px solid hsl(0, 100%, 66%);
+}
+.after {
+  text-align: center;
+  margin: 10px 150px 0 0;
+  line-height: 50px;
+  letter-spacing: 2px;
+  display: none;
+}
+::placeholder {
+  font-size: 13px;
+  font-family: "Space Grotesk", sans-serif;
+}
+input:hover {
+  transition: 0.3s;
+  cursor: pointer;
+  border: 1px solid hsl(249, 99%, 64%);
+}
+button:hover {
+  cursor: pointer;
+  transition: 0.3s;
+  transform: scale(0.98);
+}
+button:active {
+  transform: scale(0.96);
+}
+@media screen and (max-width: 425px) {
+  main {
+    grid-template-columns: 1fr;
+  }
+  .right {
+    margin: 120px 0 0 80px;
+  }
+  .backCard {
+    top: 25px;
+    left: 70px;
+  }
+  .frontCard {
+    top: 150px;
+    left: 10px;
+    z-index: 1;
+  }
+  .cardNumber,
+  .cardName,
+  .cardDate,
+  .cvcCard,
+  .logoCard {
+    z-index: 1;
+  }
+  .cvcCard {
+    top: 126px;
+    left: 393px;
+  }
+  .cardDate {
+    top: 330px;
+    left: 340px;
+  }
+  .cardName {
+    top: 330px;
+    left: 40px;
+  }
+  .cardNumber {
+    top: 270px;
+    left: 40px;
+  }
+  .logoCard {
+    top: 180px;
+    left: 40px;
+  }
+  .imgLeft {
+    height: 310px;
+    width: 480px;
+  }
+}
