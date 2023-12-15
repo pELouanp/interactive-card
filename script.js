@@ -128,7 +128,7 @@ btn.addEventListener("click", (e) => {
 
   // Validation du champ du nom
   if (inputName.value.length < 4) {
-    errorName.textContent = "Veuillez entrer plus de caractères";
+    errorName.textContent = "Please enter more caracters";
     inputName.classList.add("visibleBorder");
     errorName.classList.add("visibleRed");
   } else {
@@ -138,7 +138,7 @@ btn.addEventListener("click", (e) => {
 
   // Validation du champ du numéro de carte
   if (inputNumber.value.length < 19) {
-    errorNumber.textContent = "Format incorrect, chiffres uniquement";
+    errorNumber.textContent = "Wrong format, numbers only";
     inputNumber.classList.add("visibleBorder");
     errorNumber.classList.add("visibleRed");
   } else {
@@ -152,7 +152,7 @@ btn.addEventListener("click", (e) => {
     inputMm.value == "0" ||
     inputMm.value == "00"
   ) {
-    errorDate.textContent = "Veuillez entrer plus de caractères";
+    errorDate.textContent = "Please enter more caracters";
     inputMm.classList.add("visibleBorder");
   } else {
     redHidden(inputMm);
@@ -160,7 +160,7 @@ btn.addEventListener("click", (e) => {
 
   // Validation du champ de l'année
   if (inputYy.value.length < 2 || inputYy.value == "0" || inputYy.value < 23) {
-    errorDate.textContent = "Veuillez entrer plus de caractères";
+    errorDate.textContent = "Please enter more caracters";
     inputYy.classList.add("visibleBorder");
     errorDate.classList.add("visibleRed");
   } else {
@@ -170,7 +170,7 @@ btn.addEventListener("click", (e) => {
 
   // Validation du champ CVC
   if (inputCvc.value.length < 3) {
-    errorCvc.textContent = "Veuillez entrer plus de caractères";
+    errorCvc.textContent = "Please enter more caracters";
     inputCvc.classList.add("visibleBorder");
     errorCvc.classList.add("visibleRed");
   } else {
