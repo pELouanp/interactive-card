@@ -207,8 +207,10 @@ button:active {
   .cardDate,
   .cardName{
     top: 42.5%;
+    left: 30.5%;
   }
   .cvcCard{
     top: 63.5%;
+    left: 30.5%;
   }
 }
