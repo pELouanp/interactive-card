@@ -1,3 +1,4 @@
+// Sélection des éléments du DOM
 const errorName = document.querySelector(".errorName");
 const errorNumber = document.querySelector(".errorNumber");
 const errorDate = document.querySelector(".errorDate");
@@ -16,6 +17,7 @@ const after = document.querySelector(".after");
 const form = document.querySelector("form");
 const btn = document.querySelector("button");
 
+// Gestion de la frappe pour le champ du mois
 inputMm.addEventListener("keydown", (event) => {
   const number = event.key;
 
@@ -32,6 +34,7 @@ inputMm.addEventListener("keydown", (event) => {
   formatNb(inputMm);
 });
 
+// Gestion de la frappe pour le champ de l'année
 inputYy.addEventListener("keydown", (event) => {
   const number = event.key;
 
@@ -48,6 +51,7 @@ inputYy.addEventListener("keydown", (event) => {
   formatNb(inputYy);
 });
 
+// Gestion de la frappe pour le champ CVC
 inputCvc.addEventListener("keydown", (event) => {
   const number = event.key;
 
@@ -61,6 +65,7 @@ inputCvc.addEventListener("keydown", (event) => {
   formatNb(inputCvc);
 });
 
+// Gestion de la frappe pour le champ du nom
 inputName.addEventListener("keydown", (event) => {
   const letter = event.key;
 
@@ -85,6 +90,7 @@ inputName.addEventListener("keydown", (event) => {
   formatNb(inputName);
 });
 
+// Gestion de la frappe pour le champ du numéro de carte
 inputNumber.addEventListener("keydown", (event) => {
   const number = event.key;
 
@@ -106,18 +112,23 @@ inputNumber.addEventListener("keydown", (event) => {
   }
 });
 
+// Fonction utilitaire : masquer le message d'erreur
 const errorHidden = (vide) => {
   vide.textContent = "";
 };
+
+// Fonction utilitaire : supprimer la bordure rouge
 const redHidden = (vide) => {
   vide.classList.remove("visibleBorder");
 };
 
+// Gestionnaire d'événement pour le clic sur le bouton de soumission
 btn.addEventListener("click", (e) => {
   e.preventDefault();
 
+  // Validation du champ du nom
   if (inputName.value.length < 4) {
-    errorName.textContent = "Please enter more caracters";
+    errorName.textContent = "Veuillez entrer plus de caractères";
     inputName.classList.add("visibleBorder");
     errorName.classList.add("visibleRed");
   } else {
@@ -125,8 +136,9 @@ btn.addEventListener("click", (e) => {
     redHidden(inputName);
   }
 
+  // Validation du champ du numéro de carte
   if (inputNumber.value.length < 19) {
-    errorNumber.textContent = "Wrong format, numbers only";
+    errorNumber.textContent = "Format incorrect, chiffres uniquement";
     inputNumber.classList.add("visibleBorder");
     errorNumber.classList.add("visibleRed");
   } else {
@@ -134,19 +146,21 @@ btn.addEventListener("click", (e) => {
     redHidden(inputNumber);
   }
 
+  // Validation du champ du mois
   if (
     inputMm.value.length < 1 ||
     inputMm.value == "0" ||
     inputMm.value == "00"
   ) {
-    errorDate.textContent = "Please enter more caracters";
+    errorDate.textContent = "Veuillez entrer plus de caractères";
     inputMm.classList.add("visibleBorder");
   } else {
     redHidden(inputMm);
   }
 
+  // Validation du champ de l'année
   if (inputYy.value.length < 2 || inputYy.value == "0" || inputYy.value < 23) {
-    errorDate.textContent = "Please enter more caracters";
+    errorDate.textContent = "Veuillez entrer plus de caractères";
     inputYy.classList.add("visibleBorder");
     errorDate.classList.add("visibleRed");
   } else {
@@ -154,14 +168,17 @@ btn.addEventListener("click", (e) => {
     redHidden(inputYy);
   }
 
+  // Validation du champ CVC
   if (inputCvc.value.length < 3) {
-    errorCvc.textContent = "Please enter more caracters";
+    errorCvc.textContent = "Veuillez entrer plus de caractères";
     inputCvc.classList.add("visibleBorder");
     errorCvc.classList.add("visibleRed");
   } else {
     errorHidden(errorCvc);
     redHidden(inputCvc);
   }
+
+  // Si toutes les conditions sont remplies, affichage des détails de la carte
   if (
     inputName.value.length > 4 &&
     inputNumber.value.length == 19 &&
