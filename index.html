@@ -2,38 +2,54 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <!-- Déclaration de l'encodage des caractères en UTF-8 -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- displays site properly based on user's device -->
+    <!-- Assure un affichage optimal sur divers appareils -->
+
+   <meta name="description" content="Explore an engaging and interactive card details form, designed as part of the Frontend Mentor challenge. 
+     Immerse yourself in a seamless user experience as you input cardholder information, including name, card number, expiration date, and CVC. 
+     Witness a visually appealing display of card details on the left, accompanied by an artistic background.
+     Enhance your coding skills by delving into this responsive web design, where aesthetics meet functionality. 
+     This project was coded by pELouanp and is a part of the Frontend Mentor community challenges." />
+    <!-- Ajout de la balise meta pour la description de la page -->
 
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+    <!-- Icône du site -->
 
-    <title>Frontend Mentor | Interactive card details form</title>
+    <title>Frontend Mentor | Interactive Card Details Form</title>
+    <!-- Titre de la page -->
 
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <!-- Importation de la police depuis Google Fonts -->
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap");
     </style>
+
+    <!-- Lien vers la feuille de style personnalisée -->
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <!-- Contenu principal de la page -->
     <main>
+      <!-- Section gauche avec des éléments visuels de la carte -->
       <section class="left">
-        <img class="imgLeft" src="bg-main-desktop.png" alt="fond coloré" />
+        <img class="imgLeft" src="bg-main-desktop.png" alt="colored background" />
         <img class="frontCard" src="bg-card-front.png" alt="front card" />
-        <img class="logoCard" src="card-logo.svg" alt="logo carte" />
+        <img class="logoCard" src="card-logo.svg" alt="card logo" />
         <div class="cardNumber">0000 0000 0000 0000</div>
         <div class="cardName">JANE APPLESEED</div>
         <div class="cardDate">00/00</div>
         <img class="backCard" src="bg-card-back.png" alt="back card" />
         <div class="cvcCard">000</div>
       </section>
+      <!-- Section droite avec le formulaire de saisie des détails de carte -->
       <section class="right">
+        <!-- Formulaire -->
         <form>
           <label for="name">CARDHOLDER NAME</label>
           <input
             class="name"
             type="text"
-            placeholder="e.g.  Jane Appleseed"
+            placeholder="e.g. Jane Appleseed"
             name="name"
             autofocus
           />
@@ -43,31 +59,37 @@
           <input
             class="number"
             type="text"
-            placeholder="e.g.  1234 5678 9123 0000"
+            placeholder="e.g. 1234 5678 9123 0000"
             name="number"
           />
           <span class="errorNumber"></span>
+          <!-- Row pour la date d'expiration et le code CVC -->
           <div class="labelRow">
             <label for="date">EXP. DATE (MM/YY)</label>
             <label class="labelCvc" for="cvc">CVC</label>
           </div>
+          <!-- Row pour les champs d'entrée -->
           <div class="inputRow">
             <input class="mm" type="text" placeholder="MM" name="date" />
             <input class="yy" type="text" placeholder="YY" name="date" />
             <input class="cvc" type="text" placeholder="e.g. 123" name="cvc" />
           </div>
+          <!-- Affichage des erreurs sous les champs correspondants -->
           <div class="errorFin">
             <span class="errorDate"></span>
             <span class="errorCvc"></span>
           </div>
+          <!-- Bouton de confirmation -->
           <button type="submit">Confirm</button>
         </form>
+        <!-- Section affichée après la soumission réussie du formulaire -->
         <section class="after">
-          <img src="icon-complete.svg" alt="icon complete" />
+          <img src="icon-complete.svg" alt="confirmation icon" />
           <h2>THANK YOU!</h2>
           <p>We've added your card details</p>
           <button>Continue</button>
         </section>
+        <!-- Attribution du défi et crédits de codage -->
         <div class="attribution">
           Challenge by
           <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
@@ -77,5 +99,6 @@
       </section>
     </main>
   </body>
+  <!-- Importation du script JavaScript -->
   <script src="script.js"></script>
 </html>
