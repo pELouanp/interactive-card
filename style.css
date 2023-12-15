@@ -1,12 +1,17 @@
+/* Réinitialisation des marges et des rembourrages pour tous les éléments */
 * {
   margin: 0;
   padding: 0;
 }
+
+/* Style général pour la balise <main> avec une disposition en grille à deux colonnes */
 main {
   display: grid;
   grid-template-columns: 1fr 1fr;
   font-family: "Space Grotesk", sans-serif;
 }
+
+/* Style pour le formulaire avec une disposition en colonne, une largeur fixe, une petite taille de police et un espacement entre les caractères */
 form {
   display: flex;
   flex-direction: column;
@@ -14,6 +19,8 @@ form {
   font-size: 10px;
   letter-spacing: 1px;
 }
+
+/* Style pour les champs de saisie avec un rembourrage, un bord arrondi, une bordure et une opacité */
 input {
   padding: 10px;
   border-radius: 5px;
@@ -21,6 +28,8 @@ input {
   opacity: 0.7;
   margin: 6px 0 0 2px;
 }
+
+/* Style pour le bouton avec une couleur de texte blanche, un fond coloré, une largeur fixe, un rembourrage, un bord arrondi et une police spécifique */
 button {
   color: white;
   background: hsl(278, 68%, 11%);
@@ -33,21 +42,40 @@ button {
   margin-top: 15px;
   font-family: "Space Grotesk", sans-serif;
 }
+
+/* Style pour les paragraphes avec une taille de police spécifique et une opacité */
 p {
   font-size: 13px;
   opacity: 0.4;
   margin: -10px 0 10px 0px;
 }
+
+/* Style pour l'attribution avec une taille de police spécifique et un alignement au centre */
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+/* Style pour les liens dans l'attribution avec une couleur spécifique */
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/* Style pour la partie droite de la mise en page avec une marge, une hauteur fixe */
 .right {
   margin: 270px 150px;
   height: 300px;
 }
+
+/* Style pour le logo avec une position absolue, une hauteur fixe et une position spécifique */
 .logoCard {
   position: absolute;
   top: 25%;
   left: 16%;
   height: 40px;
 }
+
+/* Styles pour les cartes avant et arrière avec des positions absolues, des hauteurs, des bordures arrondies et des ombres */
 .frontCard,
 .backCard {
   position: absolute;
@@ -56,11 +84,14 @@ p {
   height: 220px;
   border-radius: 10px;
   box-shadow: 0.9px 0.9px 0.6px rgba(0, 0, 0, 0.02),
-    2.1px 2.2px 1.5px rgba(0, 0, 0, 0.028),
-    3.9px 4.1px 2.9px rgba(0, 0, 0, 0.035),
-    6.9px 7.4px 5.1px rgba(0, 0, 0, 0.042),
-    13px 13.8px 9.6px rgba(0, 0, 0, 0.05), 31px 33px 23px rgba(0, 0, 0, 0.07);
+              2.1px 2.2px 1.5px rgba(0, 0, 0, 0.028),
+              3.9px 4.1px 2.9px rgba(0, 0, 0, 0.035),
+              6.9px 7.4px 5.1px rgba(0, 0, 0, 0.042),
+              13px 13.8px 9.6px rgba(0, 0, 0, 0.05),
+              31px 33px 23px rgba(0, 0, 0, 0.07);
 }
+
+/* Styles pour les éléments du texte sur les cartes (numéro, nom, date, CVC) avec des positions absolues, des tailles de police, des couleurs et un espacement des caractères spécifiques */
 .cardNumber,
 .cardName,
 .cardDate,
@@ -72,44 +103,64 @@ p {
   color: white;
   letter-spacing: 3px;
 }
+
+/* Style spécifique pour le nom sur la carte */
 .cardName {
   top: 44.5%;
   left: 16%;
   font-size: 11px;
   letter-spacing: 2px;
 }
+
+/* Style spécifique pour la date sur la carte */
 .cardDate {
   top: 44.5%;
   left: 37.5%;
   font-size: 11px;
   letter-spacing: 2px;
 }
+
+/* Style spécifique pour le CVC sur la carte */
 .cvcCard {
   top: 65.2%;
   left: 42.5%;
   letter-spacing: 2px;
   font-size: 13px;
 }
+
+/* Style spécifique pour la carte arrière avec une position différente */
 .backCard {
   top: 53%;
   left: 20%;
 }
+
+/* Style pour l'attribution avec une marge spécifique */
 .attribution {
   margin: 300px 110px 0 0;
 }
+
+/* Styles pour certains éléments spécifiques de taille (mm, yy, cvc) */
 .mm,
 .yy {
   width: 40px;
 }
+
+/* Style spécifique pour l'année (yy) avec une marge à gauche */
 .yy {
   margin: 0 12px 0 3px;
 }
+
+/* Style spécifique pour le CVC avec une largeur fixe et une marge à gauche */
 .cvc {
   width: 127px;
 }
+
+/* Style spécifique pour l'étiquette CVC avec une marge à gauche */
 .labelCvc {
   margin-left: 40px;
 }
+
+/* Styles pour les messages d'erreur avec des marges et des tailles de police spécifiques */
 .errorName,
 .errorNumber,
 .errorDate,
@@ -117,15 +168,23 @@ p {
   margin: 5px 0 30px 5px;
   font-size: 8px;
 }
+
+/* Style spécifique pour l'erreur CVC avec une marge à gauche */
 .errorCvc {
   margin-left: 20px;
 }
+
+/* Style pour le texte visible en rouge */
 .visibleRed {
   color: hsl(0, 100%, 66%);
 }
+
+/* Style pour la bordure visible en rouge */
 .visibleBorder {
   border: 1px solid hsl(0, 100%, 66%);
 }
+
+/* Style pour la section "after" avec un texte centré, une marge, une hauteur de ligne, un espacement des caractères et une propriété d'affichage initialisée à "none" */
 .after {
   text-align: center;
   margin: 10px 150px 0 0;
@@ -133,39 +192,53 @@ p {
   letter-spacing: 2px;
   display: none;
 }
+
+/* Style pour le texte de l'attribut du placeholder avec une taille de police et une famille de police spécifiques */
 ::placeholder {
   font-size: 13px;
   font-family: "Space Grotesk", sans-serif;
 }
+
+/* Style pour les champs de saisie lors du survol avec une transition, un curseur spécifique et une bordure rouge */
 input:hover {
   transition: 0.3s;
   cursor: pointer;
   border: 1px solid hsl(249, 99%, 64%);
 }
+
+/* Style pour le bouton lors du survol avec un curseur spécifique, une transition et une légère réduction de l'échelle */
 button:hover {
   cursor: pointer;
   transition: 0.3s;
   transform: scale(0.98);
 }
+
+/* Style pour le bouton lorsqu'il est enfoncé avec une légère réduction de l'échelle */
 button:active {
   transform: scale(0.96);
 }
+
+/* Media query pour les écrans de petite taille (max-width: 425px) */
 @media screen and (max-width: 425px) {
   main {
     grid-template-columns: 1fr;
   }
+  /* Ajustements pour la partie "right" */
   .right {
     margin: 120px 0 0 80px;
   }
+  /* Ajustements pour la carte arrière */
   .backCard {
     top: 25px;
     left: 70px;
   }
+  /* Ajustements pour la carte avant */
   .frontCard {
     top: 150px;
     left: 10px;
     z-index: 1;
   }
+  /* Ajustements pour les éléments du texte sur les cartes */
   .cardNumber,
   .cardName,
   .cardDate,
@@ -173,45 +246,59 @@ button:active {
   .logoCard {
     z-index: 1;
   }
+  /* Ajustements pour le CVC sur la carte */
   .cvcCard {
     top: 126px;
     left: 393px;
   }
+  /* Ajustements pour la date sur la carte */
   .cardDate {
     top: 330px;
     left: 340px;
   }
+  /* Ajustements pour le nom sur la carte */
   .cardName {
     top: 330px;
     left: 40px;
   }
+  /* Ajustements pour le numéro sur la carte */
   .cardNumber {
     top: 270px;
     left: 40px;
   }
+  /* Ajustements pour le logo sur la carte */
   .logoCard {
     top: 180px;
     left: 40px;
   }
+  /* Ajustements pour une image à gauche */
   .imgLeft {
     height: 310px;
     width: 480px;
   }
 }
+
+/* Media query pour les écrans de taille moyenne (max-width: 375px) */
 @media screen and (max-width: 375px) {
+  /* Ajustements de la taille de police pour le numéro sur la carte */
   .cardNumber{
     font-size: 20px
   }
 }
+
+/* Media query pour les écrans de grande taille (min-width: 1440px) */
 @media screen and (min-width: 1440px) {
+  /* Ajustements de la position pour la date et le nom sur la carte */
   .cardDate,
   .cardName{
     top: 42.5%;
     left: 31.5%;
   }
+  /* Ajustements de la position pour le nom sur la carte */
   .cardName{
     left: 16%
   }
+  /* Ajustements de la position pour le CVC sur la carte */
   .cvcCard{
     top: 63.5%;
     left: 36.5%;
