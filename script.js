@@ -195,6 +195,7 @@ btn.addEventListener("click", (e) => {
       cardDate.textContent = `${inputMm.value}/${inputYy.value}`;
     }
     cvcCard.textContent = inputCvc.value;
+    // le formulaire disparaît et est remplacé par un message de remerciement
     form.style.display = "none";
     after.style.display = "block";
   }
