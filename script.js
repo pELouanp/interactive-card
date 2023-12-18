@@ -1,13 +1,13 @@
 // Sélection des éléments du DOM
+const inputNumber = document.querySelector(".number");
+const inputName = document.querySelector(".name");
+const inputMm = document.querySelector(".mm");
+const inputYy = document.querySelector(".yy");
+const inputCvc = document.querySelector(".cvc");
 const errorName = document.querySelector(".errorName");
 const errorNumber = document.querySelector(".errorNumber");
 const errorDate = document.querySelector(".errorDate");
 const errorCvc = document.querySelector(".errorCvc");
-const inputName = document.querySelector(".name");
-const inputNumber = document.querySelector(".number");
-const inputMm = document.querySelector(".mm");
-const inputYy = document.querySelector(".yy");
-const inputCvc = document.querySelector(".cvc");
 const cardName = document.querySelector(".cardName");
 const cardNumber = document.querySelector(".cardNumber");
 const cardDate = document.querySelector(".cardDate");
@@ -95,6 +95,7 @@ inputNumber.addEventListener("keydown", (event) => {
   const number = event.key;
 
   const formatNb = (inputNb) => {
+    // codes ASCII qui correspondent aux chiffres (0 à 9 compris)
     if (number > 48 || number < 57) {
       inputNb.maxLength = 19;
     } else {
