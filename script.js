@@ -126,6 +126,16 @@ const redHidden = (vide) => {
 // Gestionnaire d'événement pour le clic sur le bouton de soumission
 btn.addEventListener("click", (e) => {
   e.preventDefault();
+  
+   // Validation du champ du numéro de carte
+  if (inputNumber.value.length < 19) {
+    errorNumber.textContent = "Wrong format, numbers only";
+    inputNumber.classList.add("visibleBorder");
+    errorNumber.classList.add("visibleRed");
+  } else {
+    errorHidden(errorNumber);
+    redHidden(inputNumber);
+  }
 
   // Validation du champ du nom
   if (inputName.value.length < 4) {
@@ -135,16 +145,6 @@ btn.addEventListener("click", (e) => {
   } else {
     errorHidden(errorName);
     redHidden(inputName);
-  }
-
-  // Validation du champ du numéro de carte
-  if (inputNumber.value.length < 19) {
-    errorNumber.textContent = "Wrong format, numbers only";
-    inputNumber.classList.add("visibleBorder");
-    errorNumber.classList.add("visibleRed");
-  } else {
-    errorHidden(errorNumber);
-    redHidden(inputNumber);
   }
 
   // Validation du champ du mois
